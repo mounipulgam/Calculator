@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .calculator {
+            margin: 50px auto;
+            width: 250px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        .button {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+        }
+        .display {
+            width: 100%;
+            height: 45px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: right;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form method="post">
+                <input type="text" name="expression" value="{{ expression }}" class="display" readonly>
+                
+                <div class="button-row">
+                    <button type="submit" name="button" value="7" class="btn btn-light button">7</button>
+                    <button type="submit" name="button" value="8" class="btn btn-light button">8</button>
+                    <button type="submit" name="button" value="9" class="btn btn-light button">9</button>
+                    <button type="submit" name="button" value="/" class="btn btn-light button">/</button>
+                </div>
+                
+                <div class="button-row">
+                    <button type="submit" name="button" value="4" class="btn btn-light button">4</button>
+                    <button type="submit" name="button" value="5" class="btn btn-light button">5</button>
+                    <button type="submit" name="button" value="6" class="btn btn-light button">6</button>
+                    <button type="submit" name="button" value="*" class="btn btn-light button">×</button>
+                </div>
+                
+                <div class="button-row">
+                    <button type="submit" name="button" value="1" class="btn btn-light button">1</button>
+                    <button type="submit" name="button" value="2" class="btn btn-light button">2</button>
+                    <button type="submit" name="button" value="3" class="btn btn-light button">3</button>
+                    <button type="submit" name="button" value="-" class="btn btn-light button">−</button>
+                </div>
+                
+                <div class="button-row">
+                    <button type="submit" name="button" value="0" class="btn btn-light button">0</button>
+                    <button type="submit" name="button" value="." class="btn btn-light button">.</button>
+                    <button type="submit" name="button" value="=" class="btn btn-light button">=</button>
+                    <button type="submit" name="button" value="+" class="btn btn-light button">+</button>
+                </div>
+                
+                <div class="button-row">
+                    <button type="submit" name="button" value="C" class="btn btn-danger button">C</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
